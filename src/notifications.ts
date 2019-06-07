@@ -4,7 +4,7 @@ notifier.displayFirstMessage = (task: any, time: number) => {
 
     let message = {
         title: "Start Your First Task!",
-        message: `Time to do your first task:\n${task}.\n\nYou have ${time / 60 / 1000} minutes to work on it`,
+        message: `Time to do your first task:\n${task}.\n\nYou have ${time} minutes to work on it`,
         sound: true,
         wait: false
     }
@@ -16,7 +16,7 @@ notifier.displayMiddleMessage = (task: any, time: number) => {
 
     let message = {
         title: "Start Your Next Task!",
-        message: `Time to do your next task:\n${task}.\n\nYou have ${time / 60 / 1000} minutes to work on it`,
+        message: `Time to do your next task:\n${task}.\n\nYou have ${time} minutes to work on it`,
         sound: true,
         wait: false
     }

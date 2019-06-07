@@ -1,28 +1,22 @@
 import { Command } from "@oclif/command";
 const alerts = require('./notifications');
 const gatherTasks = require('./prompter');
+const startTimer = require('./timer');
 
 class TaskTimer extends Command {
 
-  startTimer(time: number) {
-    return new Promise((resolve) => setTimeout(resolve, time))
-  }
-
   async startFirstTask(task: any, time: number) {
     alerts.displayFirstMessage(task, time)
-    await this.startTimer(time);
+    await startTimer(time * 60000);
   }
 
   async startRestOfTasks(tasks: Array<any>) {
-
     for (let j = 1; j < tasks.length; j++) {
       let { task, time } = tasks[j];
       alerts.displayMiddleMessage(task, time);
-      await this.startTimer(time);
+      await startTimer(time * 60000);
     }
-
     alerts.displayLastMessage();
-
   }
 
   async run() { //Two step tool
