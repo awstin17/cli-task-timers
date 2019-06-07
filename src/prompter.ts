@@ -6,7 +6,7 @@ async function gatherTasks() {
     for (let i = 0; true; i++) {
         taskList[i] = {}
         taskList[i].task = await cli.prompt("Task to complete");
-        taskList[i].time = await cli.prompt("Time you will allot to this task");
+        taskList[i].time = await cli.prompt("Time (in minutes) you will allot to this task") * 1000 * 60;
 
         if ((await cli.confirm("Add another task? (y/n)")) == false) {
             break;
