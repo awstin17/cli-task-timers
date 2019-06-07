@@ -5,11 +5,12 @@ notifier.displayFirstMessage = (task: any, time: number) => {
     let message = {
         title: "Start Your First Task!",
         message: `Time to do your first task:\n${task}.\n\nYou have ${time} minutes to work on it`,
+        icon: null,
         sound: true,
         wait: false
     }
 
-    notifier.notify(message);
+    notifier.notify(message, function (err: any, response: any) { });
 }
 
 notifier.displayMiddleMessage = (task: any, time: number) => {
@@ -21,7 +22,7 @@ notifier.displayMiddleMessage = (task: any, time: number) => {
         wait: false
     }
 
-    notifier.notify(message);
+    notifier.notify(message, function (err: any, response: any) { });
 }
 
 notifier.displayLastMessage = () => {
@@ -33,7 +34,7 @@ notifier.displayLastMessage = () => {
         wait: false
     }
 
-    notifier.notify(message);
+    notifier.notify(message, function (err: any, response: any) { });
 }
 
 module.exports = notifier;
