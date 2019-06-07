@@ -1,6 +1,7 @@
 import { Command } from "@oclif/command";
 import cli from "cli-ux";
 const alerts = require('./notifications');
+const gatherTasks = require('./prompter');
 
 class TaskTimer extends Command {
 
@@ -42,10 +43,10 @@ class TaskTimer extends Command {
   }
 
   async run() { //Two step tool
-    let tasks = await this.gatherTasks(); // 1) Gather tasks from user and time they want to spend on them
+    let tasks = await gatherTasks(); // 1) Gather tasks from user and time they want to spend on them
     await this.startFirstTask(tasks[0].task, tasks[0].time)
     await this.startRestOfTasks(tasks)
-    this.exit();
+    // this.exit();
   }
 }
 
