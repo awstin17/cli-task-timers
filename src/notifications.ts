@@ -1,6 +1,6 @@
 const notifier = require("node-notifier");
 
-notifier.generateFirstMessage = (task: any, time: number) => {
+notifier.displayFirstMessage = (task: any, time: number) => {
 
     let message = {
         title: "Start Your First Task!",
@@ -9,10 +9,10 @@ notifier.generateFirstMessage = (task: any, time: number) => {
         wait: false
     }
 
-    return message
+    notifier.notify(message);
 }
 
-notifier.generateMiddleMessage = (task: any, time: number) => {
+notifier.displayMiddleMessage = (task: any, time: number) => {
 
     let message = {
         title: "Start Your Next Task!",
@@ -21,10 +21,10 @@ notifier.generateMiddleMessage = (task: any, time: number) => {
         wait: false
     }
 
-    return message
+    notifier.notify(message);
 }
 
-notifier.generateLastMessage = () => {
+notifier.displayLastMessage = () => {
 
     let message = {
         title: "Time!",
@@ -33,7 +33,7 @@ notifier.generateLastMessage = () => {
         wait: false
     }
 
-    return message
+    notifier.notify(message);
 }
 
 module.exports = notifier;

@@ -1,7 +1,6 @@
 import { Command } from "@oclif/command";
 import cli from "cli-ux";
 const alerts = require('./notifications');
-let { notify, generateFirstMessage, generateMiddleMessage, generateLastMessage } = alerts
 
 class TaskTimer extends Command {
 
@@ -21,27 +20,32 @@ class TaskTimer extends Command {
     return taskList;
   }
 
-  async startTimers(tasks: any) {
+  startTimer(time: number) {
+    return new Promise((resolve) => setTimeout(resolve, time))
+  }
 
-    function setTimer(time: number) {
-      return new Promise((resolve) => setTimeout(resolve, time))
-    }
+  async startFirstTask(task: any, time: number) {
+    alerts.displayFirstMessage(task, time)
+    await this.startTimer(time);
+  }
 
-    alerts.notify(alerts.generateFirstMessage(tasks[0].task, tasks[0].time));
+  async startRestOfTasks(tasks: Array<any>) {
 
-    for (let j = 0; j < tasks.length; j++) {
+    for (let j = 1; j < tasks.length; j++) {
       let { task, time } = tasks[j]; // Deconstructs current task object
-      alerts.notify(alerts.generateMiddleMessage(task, time)); // Display notification to move to next task
-      await setTimer(time) // Set timer for current task
+      alerts.displayMiddleMessage(task, time); // Display notification to move to next task
+      await this.startTimer(time); // Set timer for current task
     }
 
-    alerts.notify(alerts.generateLastMessage())
+    alerts.displayLastMessage();
+
   }
 
   async run() { //Two step tool
     let tasks = await this.gatherTasks(); // 1) Gather tasks from user and time they want to spend on them
-    await this.startTimers(tasks); // 2) Start timer loop and get to work!
-
+    await this.startFirstTask(tasks[0].task, tasks[0].time)
+    await this.startRestOfTasks(tasks)
+    this.exit();
   }
 }
 
