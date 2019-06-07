@@ -1,55 +1,47 @@
 import { Command } from "@oclif/command";
 import cli from "cli-ux";
-const notifier = require("node-notifier");
+const alerts = require('./notifications');
+let { notify, generateFirstMessage, generateMiddleMessage, generateLastMessage } = alerts
 
 class TaskTimer extends Command {
-  static description = "describe the command here";
-
-  displayNotification(task: any, time: any) {
-    notifier.notify(
-      {
-        title: "My awesome title",
-        message: `Time to do ${task} Mr. User. You have ${time} seconds to do so`,
-        sound: true, // Only Notification Center or Windows Toasters
-        wait: false // Wait with callback, until user action is taken against notification
-      },
-      function(err: any, response: any) {
-        // Response is response from notification
-      }
-    );
-  }
 
   async gatherTasks() {
-    let i = 0;
-    let taskList: any = [];
+    let taskList: Array<any> = [];
 
-    while (taskList) {
-      taskList[i] = {};
+    for (let i = 0; true; i++) {
+      taskList[i] = {}
       taskList[i].task = await cli.prompt("Task to complete");
       taskList[i].time = await cli.prompt("Time you will allot to this task");
 
       if ((await cli.confirm("Add another task? (y/n)")) == false) {
         break;
       }
-
-      i++;
     }
 
     return taskList;
   }
 
   async startTimers(tasks: any) {
-    for (let j = 0; j < tasks.length; j++) {
-      await new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), tasks[j].time);
-      });
-      this.displayNotification(tasks[j].task, tasks[j].time);
+
+    function setTimer(time: number) {
+      return new Promise((resolve) => setTimeout(resolve, time))
     }
+
+    alerts.notify(alerts.generateFirstMessage(tasks[0].task, tasks[0].time));
+
+    for (let j = 0; j < tasks.length; j++) {
+      let { task, time } = tasks[j]; // Deconstructs current task object
+      alerts.notify(alerts.generateMiddleMessage(task, time)); // Display notification to move to next task
+      await setTimer(time) // Set timer for current task
+    }
+
+    alerts.notify(alerts.generateLastMessage())
   }
 
-  async run() {
-    let tasks: any = await this.gatherTasks();
-    this.startTimers(tasks);
+  async run() { //Two step tool
+    let tasks = await this.gatherTasks(); // 1) Gather tasks from user and time they want to spend on them
+    await this.startTimers(tasks); // 2) Start timer loop and get to work!
+
   }
 }
 
