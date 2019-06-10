@@ -1,8 +1,8 @@
 {
-  "name": "task-timer",
+  "name": "cli-task-timer",
   "description": "Manage multiple projects at once by setting alarms to move onto your next item on the coding list!",
   "version": "0.0.0",
-  "author": "awstin17 @awstin17",
+  "author": "awstin17",
   "bin": {
     "ttimer": "./bin/run"
   },
@@ -13,6 +13,7 @@
     "@oclif/plugin-help": "^2.2.0",
     "cli-ux": "^5.2.1",
     "node-notifier": "^5.4.0",
+    "npm": "^6.9.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
