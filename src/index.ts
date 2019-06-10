@@ -5,7 +5,7 @@ const startTimer = require('./timer'); // imports function that starts a timer
 
 class TaskTimer extends Command {
 
-  async doTasks(tasks: Array<any>) {
+  async timeTasks(tasks: Array<any>) {
 
     // First Task
     alerts.displayFirstMessage(tasks[0].task, tasks[0].time)
@@ -23,7 +23,7 @@ class TaskTimer extends Command {
 
   async run() { //Two step tool
     let tasks = await gatherTasks(); // 1) Gather tasks from user and time they want to spend on them
-    await this.doTasks(tasks) // 2) Go through task list, display message, then start timer
+    await this.timeTasks(tasks) // 2) Go through task list, display message, then start timer
   }
 }
 

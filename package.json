@@ -1,10 +1,10 @@
 {
-  "name": "TaskTimer",
+  "name": "task-timer",
   "description": "Manage multiple projects at once by setting alarms to move onto your next item on the coding list!",
   "version": "0.0.0",
   "author": "awstin17 @awstin17",
   "bin": {
-    "TaskTimer": "./bin/run"
+    "ttimer": "./bin/run"
   },
   "bugs": "https://github.com/awstin17/task-timer/issues",
   "dependencies": {
