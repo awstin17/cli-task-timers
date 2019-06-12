@@ -7,6 +7,7 @@ Have a lot of different projects to do at once and need some organization? Have 
 [![Version](https://img.shields.io/npm/v/cli-task-timers.svg)](https://npmjs.org/package/cli-task-timers)
 [![Downloads/week](https://img.shields.io/npm/dw/cli-task-timers.svg)](https://npmjs.org/package/cli-task-timers)
 [![License](https://img.shields.io/npm/l/cli-task-timers.svg)](https://github.com/awstin17/cli-task-timers/blob/master/package.json)
+![build](https://travis-ci.org/awstin17/cli-task-timers.svg?branch=master)
 
 # Installation
 
