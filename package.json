@@ -4,7 +4,7 @@
   "version": "1.0.2",
   "author": "awstin17",
   "bin": {
-    "timer": "./bin/run"
+    "ttimer": "./bin/run"
   },
   "bugs": "https://github.com/awstin17/task-timer/issues",
   "dependencies": {
@@ -42,7 +42,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
-    "bin": "TaskTmer"
+    "bin": "ttimer"
   },
   "repository": "awstin17/task-timer",
   "scripts": {
