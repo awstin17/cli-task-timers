@@ -27,6 +27,10 @@ You will then be prompted to enter tasks and the time you will devote to doing s
 
 Your laptop/computer should then send you notifications on when to begin tasks and a final message when to stop.
 
+# Version
+
+To check which version you have installed, user either ```ttimer --version``` or ```ttimer -v```
+
 # Sidenote / Warning
 
 This command will need its own dedicated terminal to run in for as long as you have set your timers for. You can open new terminals to do your code work!
