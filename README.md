@@ -22,7 +22,7 @@ The tool is simple to use! Just type in the command `ttimer` in the command line
 
 You will then be prompted to enter tasks and the time you will devote to doing said task. It will look like this:
 
-![example flow](https://github.com/awstin17/task-timer/blob/master/assets/cli-example.PNG)
+![example flow](https://raw.githubusercontent.com/awstin17/task-timer/master/assets/cli-example.PNG)
 
 Your laptop/computer should then send you notifications on when to begin tasks and a final message when to stop.
 
