@@ -1,7 +1,7 @@
 {
   "name": "cli-task-timers",
-  "description": "Manage multiple projects at once by setting alarms to move onto your next item on the coding list!",
-  "version": "1.0.2",
+  "description": "Have a lot of different projects to do at once and need some organization? Have your operating system send you notifications to keep you on task and move to the next project when notified",
+  "version": "1.0.3",
   "author": "awstin17",
   "bin": {
     "ttimer": "./bin/run"
@@ -37,7 +37,7 @@
   ],
   "homepage": "https://github.com/awstin17/task-timer",
   "keywords": [
-    "oclif"
+    "oclif", "cli tools", "cli", "timer", "timers"
   ],
   "license": "MIT",
   "main": "lib/index.js",
