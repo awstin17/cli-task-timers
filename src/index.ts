@@ -7,12 +7,12 @@ class TaskTimer extends Command {
   async timeTasks(tasks: Array<any>) {
     // First Task
     alerts.displayFirstMessage(tasks[0].task, tasks[0].time)
-    await startTimer(tasks[0].time * 60000)
-
+    await startTimer(tasks[0].task, tasks[0].time * 60000)
+  
     // Middle tasks to last task
     for (let j = 1; j < tasks.length; j++) {
       alerts.displayMiddleMessage(tasks[j].task, tasks[j].time)
-      await startTimer(tasks[j].time * 60000)
+      await startTimer(tasks[j].task, tasks[j].time * 60000)
     }
 
     //Ending Message

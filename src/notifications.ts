@@ -4,7 +4,6 @@ notifier.displayFirstMessage = (task: any, time: number) => {
   let message = {
     title: 'Start Your First Task!',
     message: `Time to do your first task:\n${task}.\n\nYou have ${time} minutes to work on it`,
-    icon: null,
     sound: true,
     wait: false
   }
