@@ -2275,6 +2275,8 @@
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/command/lib/command.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/command/lib/main.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/command/lib/index.d.ts",
+      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/index.ts",
+      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/notifications.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/errors/lib/handle.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/errors/lib/errors/cli.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@oclif/errors/lib/errors/exit.d.ts",
@@ -2291,6 +2293,8 @@
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/cli-ux/lib/styled/tree.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/cli-ux/lib/open.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/cli-ux/lib/index.d.ts",
+      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/prompter.ts",
+      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/timer.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/chai/index.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/lodash/ts3.1/common/common.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/lodash/ts3.1/common/array.d.ts",
@@ -2352,11 +2356,7 @@
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/node/ts3.2/index.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/nock/index.d.ts",
       "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/node-notifier/index.d.ts",
-      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/sinon/ts3.1/index.d.ts",
-      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/index.ts",
-      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/notifications.ts",
-      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/prompter.ts",
-      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/src/timer.ts"
+      "c:/users/awsti/workspace/tasktimer-cli/mynewcli/node_modules/@types/sinon/ts3.1/index.d.ts"
     ]
   },
   "version": "3.4.5"
