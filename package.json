@@ -1,7 +1,7 @@
 {
   "name": "cli-task-timers",
   "description": "Have a lot of different projects to do at once and need some organization? Have your operating system send you notifications to keep you on task and move to the next project when notified",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "awstin17",
   "bin": {
     "ttimer": "./bin/run"
@@ -37,7 +37,11 @@
   ],
   "homepage": "https://github.com/awstin17/task-timer",
   "keywords": [
-    "oclif", "cli tools", "cli", "timer", "timers"
+    "oclif",
+    "cli tools",
+    "cli",
+    "timer",
+    "timers"
   ],
   "license": "MIT",
   "main": "lib/index.js",
