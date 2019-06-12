@@ -22,13 +22,7 @@ The tool is simple to use! Just type in the command `ttimer` in the command line
 
 You will then be prompted to enter tasks and the time you will devote to doing said task. It will look like this:
 
-![Task to complete: finish camera component
-How long will you "finish camera component" (in minutes): 60
-Add another task? (y/n): y
-Task to complete: Start new express project
-How long will you "Start new express project" (in minutes): 45
-Add another task? (y/n): n
-Timer Started for "finish camera component"... /](assets/cli-example)
+![example flow](https://github.com/awstin17/task-timer/blob/master/assets/cli-example.PNG)
 
 Your laptop/computer should then send you notifications on when to begin tasks and a final message when to stop.
 
