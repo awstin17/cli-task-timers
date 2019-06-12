@@ -51,7 +51,7 @@
   },
   "repository": "awstin17/task-timer",
   "scripts": {
-    "prepack": "tsc",
+    "prepack": "tsc -b",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
   },
   "types": "lib/index.d.ts"
