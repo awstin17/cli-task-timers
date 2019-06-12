@@ -31,3 +31,7 @@ Add another task? (y/n): n
 Timer Started for "finish camera component"... /](https://github.com/awstin17/task-timer/blob/master/assets/cli-example.PNG "Logo Title Text 1")
 
 Your laptop/computer should then send you notifications on when to begin tasks and a final message when to stop.
+
+# Sidenote / Warning
+
+This command will need its own dedicated terminal to run in for as long as you have set your timers for. You can open new terminals to do your code work!
