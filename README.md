@@ -28,9 +28,7 @@ Add another task? (y/n): y
 Task to complete: Start new express project
 How long will you "Start new express project" (in minutes): 45
 Add another task? (y/n): n
-Timer Started for "finish camera component"... /][example]
-
-[example]: https://github.com/awstin17/task-timer/blob/master/assets/cli-example.PNG "example flow"
+Timer Started for "finish camera component"... /](assets/cli-example)
 
 Your laptop/computer should then send you notifications on when to begin tasks and a final message when to stop.
 
