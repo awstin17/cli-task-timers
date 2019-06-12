@@ -8,9 +8,9 @@ async function gatherTasks() {
     taskList[index].task = await cli.prompt('Task to complete')
     taskList[index].time = await cli.prompt(`How long will you "${taskList[index].task}" (in minutes)`)
     // The below tests if the time they have put in is actually a number or not. If not, reprompts.
-    while (/[^0-9]/.test(taskList[index].time)) {
-      taskList[index].time = await cli.prompt(`Time (in minutes) must be a number. How long will you "${taskList[i].task}"`)
-    }   
+    // while (/[^0-9]/.test(taskList[index].time)) {
+    //   taskList[index].time = await cli.prompt(`Time (in minutes) must be a number. How long will you "${taskList[i].task}"`)
+    // }   
   }
   await getTask(i)
   i++
