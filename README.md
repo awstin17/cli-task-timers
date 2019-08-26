@@ -1,7 +1,7 @@
 cli-task-timers
 =========
 
-Have a lot of different projects to do at once and need some organization? Have your operating system send you notifications to keep you on task and move to the next project when notified.
+Have a lot of projects to do at once and need some organization? Have your operating system send you notifications to keep you on task and move to the next project when notified.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/cli-task-timers.svg)](https://npmjs.org/package/cli-task-timers)
